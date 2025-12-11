@@ -59,7 +59,7 @@ export function PastSpeakers() {
           viewport={{ once: true }}
           className="flex flex-col items-start justify-center mb-8"
         >
-          <h2 className="text-5xl sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter text-white text-left">
+          <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-bold tracking-tighter text-white text-left">
             Predavači
           </h2>
           <p className="text-left mt-5 text-white">
