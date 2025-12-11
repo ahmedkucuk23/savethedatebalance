@@ -59,11 +59,10 @@ export function PastSpeakers() {
           viewport={{ once: true }}
           className="flex flex-col items-start justify-center mb-8"
         >
-          <Eyebrow>Predavači</Eyebrow>
-          <h2 className="text-5xl sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5 text-white text-left">
+          <h2 className="text-5xl sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter text-white text-left">
             Predavači
           </h2>
-          <p className="text-left mt-5 opacity-75 text-balance-100">
+          <p className="text-left mt-5 text-white">
             Najbolji svjetski, regionalni i domaći predavači na jednom mjestu
           </p>
         </motion.div>

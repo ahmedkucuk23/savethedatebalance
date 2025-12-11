@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import BlurText from "@/components/ui/BlurText";
 
 interface AnimatedMarqueeHeroProps {
   tagline: string;
@@ -50,43 +51,19 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
           {tagline}
         </motion.div>
 
-        <motion.h1
-          initial="hidden"
-          animate="show"
-          variants={{
-            hidden: {},
-            show: {
-              transition: {
-                staggerChildren: 0.1,
-              },
-            },
-          }}
-          className="text-5xl md:text-7xl font-bold tracking-tighter text-balance-300"
-        >
-          {typeof title === 'string' ? (
-            title.split(" ").map((word, i) => (
-              <motion.span
-                key={i}
-                variants={FADE_IN_ANIMATION_VARIANTS}
-                className="inline-block"
-              >
-                {word}&nbsp;
-              </motion.span>
-            ))
-          ) : (
-            title
-          )}
-        </motion.h1>
+        <BlurText
+          text={typeof title === 'string' ? title : 'Prva konferencija o životnom balansu u BiH'}
+          className="text-5xl md:text-7xl font-bold tracking-tighter text-balance-300 text-center"
+          delay={50}
+          animateBy="words"
+        />
 
-        <motion.p
-          initial="hidden"
-          animate="show"
-          variants={FADE_IN_ANIMATION_VARIANTS}
-          transition={{ delay: 0.5 }}
-          className="mt-6 max-w-xl text-lg text-muted-foreground"
-        >
-          {description}
-        </motion.p>
+        <BlurText
+          text={description}
+          className="mt-6 max-w-xl text-lg text-muted-foreground text-center"
+          delay={30}
+          animateBy="words"
+        />
 
         <motion.div
           initial="hidden"

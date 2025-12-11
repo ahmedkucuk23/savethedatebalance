@@ -13,6 +13,9 @@ const AnimatedMarqueeHero = dynamic(() => import("@/components/ui/hero-3").then(
 const SarajevoConference = dynamic(() => import("@/components/blocks/sarajevo-conference"));
 const PartnersCarousel = dynamic(() => import("@/components/blocks/partners-carousel").then(mod => ({ default: mod.PartnersCarousel })));
 const PastSpeakers = dynamic(() => import("@/components/blocks/past-speakers").then(mod => ({ default: mod.PastSpeakers })));
+const ConferenceFeatures = dynamic(() => import("@/components/blocks/conference-features").then(mod => ({ default: mod.ConferenceFeatures })));
+const ConferencePartnersSection = dynamic(() => import("@/components/blocks/conference-partners").then(mod => ({ default: mod.ConferencePartnersSection })));
+const MediaPartnersSection = dynamic(() => import("@/components/blocks/media-partners").then(mod => ({ default: mod.MediaPartnersSection })));
 const ShareExpertise = dynamic(() => import("@/components/blocks/share-expertise"));
 const CurvedLoop = dynamic(() => import("@/components/CurvedLoop"));
 const BlogSection = dynamic(() => import("@/components/ui/blog-section").then(mod => ({ default: mod.BlogSection })));
@@ -49,6 +52,7 @@ export default function Home() {
 
       <TopNavigation scrollThreshold={880} hasBanner={true} />
       <HeroSection />
+      <PartnersCarousel />
       <AnimatedMarqueeHero
         tagline="Balance Conference 2026"
         title={
@@ -87,8 +91,10 @@ export default function Home() {
           </Button>
         </div>
       </section> */}
-      <PartnersCarousel />
       <PastSpeakers />
+      <ConferenceFeatures />
+      <ConferencePartnersSection />
+      <MediaPartnersSection />
 
       {/* Latest Insights Section */}
       {/* <section className="w-full bg-balance-500 backdrop-blur-sm">
