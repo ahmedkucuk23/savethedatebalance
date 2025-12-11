@@ -150,14 +150,6 @@ export const FooterBackgroundGradient = () => {
 };
 
 export const HoverFooter = () => {
-  const navigationLinks = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Conferences", href: "/conferences" },
-    { label: "Speakers", href: "/speakers" },
-    { label: "Contact", href: "/contact" },
-  ];
-
   const [isHovered, setIsHovered] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
 
@@ -197,14 +189,14 @@ export const HoverFooter = () => {
               </div>
             </Link>
             <p className="text-sm text-balance-100 leading-relaxed">
-              The first BiH conference dedicated to living in balance.
+              Prva konferencija u Bosni i Hercegovini posvećena životu u ravnoteži.
             </p>
           </div>
 
           {/* Socials */}
           <div>
             <h4 className="text-white text-lg font-semibold mb-6">
-              Socials
+              Društvene mreže
             </h4>
             <div className="flex gap-4">
               <Link
@@ -244,32 +236,13 @@ export const HoverFooter = () => {
             </div>
           </div>
 
-          {/* Navigation Links */}
-          <div>
-            <h4 className="text-white text-lg font-semibold mb-6">
-              Navigation
-            </h4>
-            <ul className="space-y-3">
-              {navigationLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-balance-100 hover:text-white transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Contact */}
           <div>
             <h4 className="text-white text-lg font-semibold mb-6">
-              Contact
+              Kontakt
             </h4>
             <p className="text-balance-100 text-sm leading-relaxed">
-              Join us for the first BiH conference dedicated to living in balance.
+              Pridružite nam se na prvoj konferenciji u Bosni i Hercegovini posvećenoj životu u ravnoteži.
             </p>
           </div>
         </div>

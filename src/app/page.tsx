@@ -11,6 +11,7 @@ const AnimatedMarqueeHero = dynamic(() => import("@/components/ui/hero-3").then(
   loading: () => <div className="h-screen" />,
 });
 const SarajevoConference = dynamic(() => import("@/components/blocks/sarajevo-conference"));
+const PartnersCarousel = dynamic(() => import("@/components/blocks/partners-carousel").then(mod => ({ default: mod.PartnersCarousel })));
 const PastSpeakers = dynamic(() => import("@/components/blocks/past-speakers").then(mod => ({ default: mod.PastSpeakers })));
 const ShareExpertise = dynamic(() => import("@/components/blocks/share-expertise"));
 const CurvedLoop = dynamic(() => import("@/components/CurvedLoop"));
@@ -49,20 +50,20 @@ export default function Home() {
       <TopNavigation scrollThreshold={880} hasBanner={true} />
       <HeroSection />
       <AnimatedMarqueeHero
-        tagline="THE ART OF BALANCE"
+        tagline="Balance Conference 2026"
         title={
           <>
-            Slow Down. Breathe In.
+            Prva konferencija
             <br />
-            Begin <span className="text-accent-magenta">Again.</span>
+            o životnom balansu u BiH
           </>
         }
-        description="Join a community redefining what it means to live well, inside and out. Reconnect with yourself, others, and what truly matters."
-        ctaText="See How We Do It"
-        ctaLink="/about"
+        description="Konferencija posvećena vašem rastu, zdravlju i balansu. Donosi inspirativne priče onih koji su životne izazove pobijedili promjenom navika i načina razmišljanja te vrhunska predavanja koja će vas motivirati da pronađete i očuvate vlastiti balans."
+        ctaText="Kupi kartu"
+        ctaLink="/conferences"
         images={CONFERENCE_IMAGES}
       />
-      <SarajevoConference />
+      {/* <SarajevoConference />
       <ShareExpertise />
       <section className="w-full bg-black relative -mt-16 md:-mt-20">
         <CurvedLoop
@@ -85,12 +86,12 @@ export default function Home() {
             </Link>
           </Button>
         </div>
-      </section>
+      </section> */}
+      <PartnersCarousel />
       <PastSpeakers />
-      
-      {/* Latest Insights Section */}
 
-<section className="w-full bg-balance-500 backdrop-blur-sm">
+      {/* Latest Insights Section */}
+      {/* <section className="w-full bg-balance-500 backdrop-blur-sm">
       <section className="mx-auto max-w-6xl relative z-10 py-16">
         <BlogSection
           heading="Latest Insights"
@@ -100,7 +101,7 @@ export default function Home() {
           mobileColumns={1}
         />
       </section>
-    </section>
+    </section> */}
 
       <HoverFooter />
     </BannerProvider>

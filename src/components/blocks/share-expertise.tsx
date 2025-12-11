@@ -4,7 +4,7 @@ import React from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Mail } from 'lucide-react'
-import DarkVeil from '@/components/ui/dark-veil'
+import Aurora from '@/components/Aurora'
 
 export type ShareExpertiseProps = {
   eyebrow?: string
@@ -31,16 +31,13 @@ export default function ShareExpertise({
 }: ShareExpertiseProps) {
   return (
     <section className="relative bg-balance-500 py-16 md:py-20 lg:pt-40 lg:pb-0 pb-0 overflow-hidden">
-      {/* DarkVeil background effect */}
+      {/* Aurora background effect */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <DarkVeil
-          hueShift={0}
-          noiseIntensity={0.0}
-          scanlineIntensity={.5}
-          speed={1.75}
-          scanlineFrequency={1.25}
-          warpAmount={0.5}
-          resolutionScale={1}
+        <Aurora
+          colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
+          blend={0.5}
+          amplitude={1.0}
+          speed={0.5}
         />
       </div>
 

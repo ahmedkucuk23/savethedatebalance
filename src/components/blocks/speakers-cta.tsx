@@ -10,9 +10,9 @@ interface SpeakersCTAProps {
 }
 
 export function SpeakersCTA({
-  heading = "See what other speakers have to say",
-  description = "Explore insights and perspectives from our diverse community of thought leaders and innovators.",
-  buttonText = "View All Speakers",
+  heading = "Pogledajte šta drugi govornici imaju za reći",
+  description = "Istražite uvide i perspektive naše raznolike zajednice lidera mišljenja i inovatora.",
+  buttonText = "Pogledajte sve govornike",
   buttonLink = "/speakers"
 }: SpeakersCTAProps) {
   return (

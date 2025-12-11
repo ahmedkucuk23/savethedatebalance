@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { TopNavigation } from '@/components/blocks/top-navigation'
 import BlurText from '@/components/ui/BlurText'
-import DarkVeil from '@/components/ui/dark-veil'
+import Aurora from '@/components/Aurora'
 import { HoverFooter } from '@/components/ui/hover-footer'
 import GradualBlur from '@/components/ui/gradual-blur'
 import { SpeakersCTA } from '@/components/blocks/speakers-cta'
@@ -102,16 +102,13 @@ export default async function SpeakerPage({
       
       <TopNavigation scrollThreshold={9999999999} />
       
-      {/* DarkVeil background effect for entire page */}
+      {/* Aurora background effect for entire page */}
       <div className="fixed inset-0 z-[1] pointer-events-none" style={{ width: '100vw', height: '100vh' }}>
-        <DarkVeil
-          hueShift={0}
-          noiseIntensity={0.0}
-          scanlineIntensity={.5}
-          speed={1.75}
-          scanlineFrequency={1.25}
-          warpAmount={0.5}
-          resolutionScale={1}
+        <Aurora
+          colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
+          blend={0.5}
+          amplitude={1.0}
+          speed={0.5}
         />
       </div>
 
@@ -143,11 +140,11 @@ export default async function SpeakerPage({
                 className="flex items-center gap-1 text-balance-200 hover:text-white transition-colors text-sm font-medium group mb-2"
               >
                 <ChevronLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-                All Speakers
+                Svi Predavači
               </Link>
 
               <h6 className="text-sm font-medium uppercase tracking-wider text-balance-200 mb-2">
-                Sarajevo Conference 2025 Speaker
+                Sarajevo Conference 2026
               </h6>
               <h1 className="text-5xl md:text-6xl font-bold text-white">
                 {record.name}
@@ -236,7 +233,7 @@ export default async function SpeakerPage({
                     </p>
                   ))
                 ) : (
-                  <p className="text-lg text-balance-200 italic">No biography available.</p>
+                  <p className="text-lg text-balance-200 italic">Biografija nije dostupna.</p>
                 )}
               </div>
 

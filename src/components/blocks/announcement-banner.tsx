@@ -65,25 +65,22 @@ function AnnouncementBannerContent({
   if (!isVisible) return null
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-[10001] w-full shadow-sm">
+    <div className="fixed top-0 left-0 right-0 z-[10001] w-full">
       <Banner
         variant="default"
         size="lg"
         layout="center"
-        className="border-0 border-b-0"
+        className="border-0 py-0 m-0"
         style={{ backgroundColor: '#00D8FF' }}
         isClosable={true}
         onClose={() => setIsVisible(false)}
       >
-        <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 w-full">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-3 w-full py-1.5 md:py-1">
           <p className="text-sm text-black font-medium text-center">
-            ✦ Save the date! Balance Conference 2026: Get Motivated is here, your next life-changing experience! ✦
+            ✦ Save the Date! Balance Konferencija 2026: Motivirajte se, vaše sljedeće iskustvo koje mijenja život! ✦
           </p>
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex items-center gap-2 md:gap-3 shrink-0">
             <CountdownTimer />
-            <Button size="sm" className="rounded-md bg-accent-gold hover:bg-accent-gold/90 text-black text-sm px-3 py-1.5 h-auto" asChild>
-              <a href="/conferences">Learn more</a>
-            </Button>
           </div>
         </div>
       </Banner>

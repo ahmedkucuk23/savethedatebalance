@@ -1,9 +1,5 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import { motion } from 'motion/react'
-import Image from 'next/image'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
 
 
 export function HeroSection() {
@@ -43,19 +39,6 @@ export function HeroSection() {
         </video>
       )}
 
-      {/* Content Overlay */}
-      <div className="relative z-10 flex items-end justify-center h-full pb-12 md:pb-16">
-        <Button
-          size="lg"
-          className="rounded-xl font-semibold text-black"
-          style={{ backgroundColor: '#FAB53D' }}
-          asChild
-        >
-          <Link href="/conferences/balance2026">
-            See What is Coming Next...
-          </Link>
-        </Button>
-      </div>
     </section>
   )
 }

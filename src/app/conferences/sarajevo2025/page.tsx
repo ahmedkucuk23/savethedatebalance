@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import { TopNavigation } from '@/components/blocks/top-navigation'
 import BlurText from '@/components/ui/BlurText'
-import DarkVeil from '@/components/ui/dark-veil'
+import Aurora from '@/components/Aurora'
 import { HoverFooter } from '@/components/ui/hover-footer'
 import GradualBlur from '@/components/ui/gradual-blur'
 import { CircularTestimonials } from '@/components/ui/circular-testimonials'
@@ -120,16 +120,13 @@ export default function ConferencesPage() {
 
       <TopNavigation scrollThreshold={9999999999} />
 
-      {/* DarkVeil background effect for entire page */}
+      {/* Aurora background effect for entire page */}
       <div className="fixed inset-0 z-[1] pointer-events-none" style={{ width: '100vw', height: '100vh' }}>
-        <DarkVeil
-          hueShift={0}
-          noiseIntensity={0.0}
-          scanlineIntensity={.5}
-          speed={1.75}
-          scanlineFrequency={1.25}
-          warpAmount={0.5}
-          resolutionScale={1}
+        <Aurora
+          colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
+          blend={0.5}
+          amplitude={1.0}
+          speed={0.5}
         />
       </div>
 

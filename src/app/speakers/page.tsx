@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import dynamicImport from 'next/dynamic'
 import { TopNavigation } from '@/components/blocks/top-navigation'
-import DarkVeil from '@/components/ui/dark-veil'
+import Aurora from '@/components/Aurora'
 import GradualBlur from '@/components/ui/gradual-blur'
 import { TeamSection, type TeamMember } from '@/components/ui/team'
 import { motion } from 'motion/react'
@@ -55,16 +55,13 @@ export default function SpeakersPage() {
 
       <TopNavigation scrollThreshold={9999999999} />
 
-      {/* DarkVeil background effect for entire page */}
+      {/* Aurora background effect for entire page */}
       <div className="fixed inset-0 z-[1] pointer-events-none" style={{ width: '100vw', height: '100vh' }}>
-        <DarkVeil
-          hueShift={0}
-          noiseIntensity={0.0}
-          scanlineIntensity={.5}
-          speed={1.75}
-          scanlineFrequency={1.25}
-          warpAmount={0.5}
-          resolutionScale={1}
+        <Aurora
+          colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
+          blend={0.5}
+          amplitude={1.0}
+          speed={0.5}
         />
       </div>
 
@@ -72,10 +69,10 @@ export default function SpeakersPage() {
       <section style={{ backgroundColor: 'rgba(10, 3, 27, 0.5)', backdropFilter: 'blur(12px)' }} className="w-full h-[50vh] relative overflow-hidden z-10">
         <div className="relative z-10 flex flex-col items-center justify-center h-full px-6">
           <h1 className="text-5xl md:text-6xl font-bold text-white text-center mb-4">
-            Our Speakers
+            Predavači
           </h1>
           <p className="text-2xl text-balance-200 text-center">
-            Leading voices in wellbeing, leadership, and lifestyle innovation
+            Najbolji svjetski, regionalni i domaći predavači na jednom mjestu
           </p>
         </div>
       </section>
@@ -83,9 +80,9 @@ export default function SpeakersPage() {
       {/* Speakers Sections Grouped by Conference */}
       <section className="relative z-10" style={{ backgroundColor: 'rgba(10, 3, 27, 0.5)', backdropFilter: 'blur(12px)' }}>
         {loading ? (
-          <div className="text-white text-center py-20">Loading speakers...</div>
+          <div className="text-white text-center py-20">Učitavanje predavača...</div>
         ) : conferenceGroups.length === 0 ? (
-          <div className="text-white text-center py-20">No conferences found</div>
+          <div className="text-white text-center py-20">Nema pronađenih konferencija</div>
         ) : (
           conferenceGroups.map((group, index) => (
           <div key={index} className={index > 0 ? 'pt-16' : ''}>
@@ -116,8 +113,8 @@ export default function SpeakersPage() {
       {/* Latest Insights Section */}
       <section className="relative z-10 max-w-6xl mx-auto py-16">
         <BlogSection
-          heading="Speaker Insights"
-          description="Discover wisdom and perspectives from our community of thought leaders and experts."
+          heading="Uvidi predavača"
+          description="Otkrijte mudrost i perspektive naše zajednice lidera mišljenja i stručnjaka."
           desktopColumns={3}
           tabletColumns={3}
           mobileColumns={1}
