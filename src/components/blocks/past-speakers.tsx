@@ -20,7 +20,7 @@ export function PastSpeakers() {
 
   useEffect(() => {
     // Fetch speakers from Balance Conference 2026
-    fetch('/api/speakers?conferenceSlug=BalanceConference2026', {
+    fetch('/api/speakers?conferenceSlug=Balance2026', {
       cache: 'no-store'
     })
       .then(res => res.json())
